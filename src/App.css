@@ -1,0 +1,43 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+ */
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.image::before{
+  content: '';
+  position: absolute;
+  top: -5px;
+  height: 7rem;
+  width: 7rem;
+  background-image: linear-gradient(360deg,#58b3ff, #bd34fe);
+  border-radius: 50%;
+}
+
+#dimensiond, #middle{
+  transform-style: preserve-3d;
+}
+
+#dimension{
+  transform: translateZ(150px);
+}
+
+/* h1{
+  color: transparent;
+  background-image: linear-gradient(45deg, tomato, black);
+  background-clip: text;
+  
+  -webkit-text-stroke: black;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+} */
