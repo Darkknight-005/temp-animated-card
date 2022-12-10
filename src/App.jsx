@@ -5,7 +5,7 @@ const dim3 = document.getElementById('dimensiond')
 const dim4 = document.getElementById('dimension')
 
 const move = (e) => {
-  let x = ((window.innerHeight) / 2 - e.pageX) / 25, y = ((window.innerWidth) / 2 - e.pageY) / 25;
+  let x = ((window.innerHeight) / 2 - e.pageX) / 20, y = ((window.innerWidth) / 2 - e.pageY) / 20;
   dim3.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`
   dim3.style.transition = `all`
   dim4.style.transform = `translateZ(${200}px)`
@@ -26,8 +26,8 @@ function App() {
 
   return (
     <div className="App flex-col" >
-      <div className="container flex justify-center gap-4 min-h-1/2  text-black" onMouseMove={move}  onMouseOut={reset}>
-        <div className='h-full ease-linear transition-all duration-200 min-w-60 rounded-md shadow-lg  shadow-black space-y-5 p-5 bg-gradient-to-br to-black from-green-500' id='dimensiond' onMouseEnter={reset} onMouseLeave={move} >
+      <div className="container flex justify-center gap-4 min-h-1/2  text-black" onMouseMove={move}  onMouseLeave={reset}>
+        <div className='h-full ease-linear transition-all duration-200 min-w-60 rounded-md shadow-lg  shadow-orange-400 space-y-5 p-5 bg-gradient-to-br to-black from-green-500' id='dimensiond'  >
           <div className='flex justify-center relative image' id="middle">
 
             <img src='./vite.svg' alt="" width={"100"} className='z-10 relative  dimension' id="dimension" />
